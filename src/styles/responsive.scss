@@ -1,0 +1,92 @@
+@import "./variables.scss";
+
+// mobile responsive
+
+@media (max-width: 500px) {
+  .showcase {
+    height: 70vh;
+    &__wrapper {
+      width: 100%;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    // cards section
+    &__card {
+      padding: 40px 15px;
+      &__text {
+        &:nth-child(2) {
+          font-size: 25px;
+          margin-top: -15px;
+        }
+      }
+      &:nth-child(2) {
+        padding: 40px 15px;
+      }
+    }
+
+    img:nth-child(1) {
+      width: 100%;
+    }
+
+    img:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  .cta {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 35px 20px;
+      align-items: stretch;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    &__content {
+      padding: 0;
+    }
+  }
+
+  .btn {
+    width: 100% !important;
+    display: block;
+  }
+
+  // Navbar
+
+  .navbar {
+    &__wrapper {
+      padding-top: 10px;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__authentication {
+      display: none;
+    }
+  }
+}
+
+// desktop responsive
+
+@media (min-width: 501px) {
+  .navbar__mobile__memu {
+    display: none;
+  }
+}
