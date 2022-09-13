@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { BsPersonCircle } from "react-icons/bs";
 import { useState } from "react";
 
-function Navbar({}) {
+function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -15,14 +15,7 @@ function Navbar({}) {
       <div className="container">
         <div className={classes.navbar__wrapper}>
           {/* mobile menu */}
-          <div className={classes.navbar__mobile__memu}>
-            {showMenu && (
-              <CgClose
-                className={classes.navbar__close_mobile}
-                onClick={() => setShowMenu(!showMenu)}
-              />
-            )}
-
+          <div className={classes.navbar__mobile__menu}>
             {!showMenu && (
               <GiHamburgerMenu
                 className={classes.navbar__hamburger_mobile}
@@ -31,57 +24,60 @@ function Navbar({}) {
             )}
 
             {showMenu && (
-              <div className={classes.navbar__menu_mobile}>
-                <Link
-                  to="/platform"
+              <>
+                <CgClose
+                  className={classes.navbar__close_mobile}
                   onClick={() => setShowMenu(!showMenu)}
-                  className={classes.navbar__link_mobile}
-                >
-                  Platform
-                </Link>
-                <Link
-                  to="/solution"
-                  onClick={() => setShowMenu(!showMenu)}
-                  className={classes.navbar__link_mobile}
-                >
-                  Solution
-                </Link>
-                <Link
-                  to="/blog"
-                  onClick={() => setShowMenu(!showMenu)}
-                  className={classes.navbar__link_mobile}
-                >
-                  Blog
-                </Link>
-                <Link
-                  to="/pricing"
-                  onClick={() => setShowMenu(!showMenu)}
-                  className={classes.navbar__link_mobile}
-                >
-                  Pricing
-                </Link>
-                <Link
-                  to="/login"
-                  onClick={() => setShowMenu(!showMenu)}
-                  className={classes.navbar__link_mobile}
-                >
-                  Log In
-                </Link>
-                <Link
-                  to="/signup"
-                  onClick={() => setShowMenu(!showMenu)}
-                  className={classes.navbar__link_mobile}
-                >
-                  Sign Up
-                </Link>
-              </div>
+                />
+
+                <div className={classes.navbar__menu_mobile}>
+                  <Link
+                    to="/platform"
+                    onClick={() => setShowMenu(!showMenu)}
+                    className={classes.navbar__link_mobile}
+                  >
+                    Platform
+                  </Link>
+                  <Link
+                    to="/solution"
+                    onClick={() => setShowMenu(!showMenu)}
+                    className={classes.navbar__link_mobile}
+                  >
+                    Solution
+                  </Link>
+                  <Link
+                    to="/blog"
+                    onClick={() => setShowMenu(!showMenu)}
+                    className={classes.navbar__link_mobile}
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    to="/pricing"
+                    onClick={() => setShowMenu(!showMenu)}
+                    className={classes.navbar__link_mobile}
+                  >
+                    Pricing
+                  </Link>
+                  <Link
+                    to="/login"
+                    onClick={() => setShowMenu(!showMenu)}
+                    className={classes.navbar__link_mobile}
+                  >
+                    Log In
+                  </Link>
+                  <Link
+                    to="/signup"
+                    onClick={() => setShowMenu(!showMenu)}
+                    className={classes.navbar__link_mobile}
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              </>
             )}
-            <Link to="/">
-              <img
-                src={Logo}
-                alt="logo"
-                className={classes.navbar__logo_mobile}
-              />
+            <Link to="/" className={classes.navbar__logo_mobile}>
+              <img src={Logo} alt="logo" />
             </Link>
             <BsPersonCircle className={classes.navbar__auth_logo_mobile} />
           </div>

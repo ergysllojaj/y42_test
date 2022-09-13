@@ -52,7 +52,6 @@
   &__hamburger_mobile {
     color: $white;
     font-size: 40px;
-    z-index: 99;
   }
   &__close_mobile {
     color: $white;
@@ -63,6 +62,10 @@
   &__auth_logo_mobile {
     color: $white;
     font-size: 45px;
+    z-index: 99;
+  }
+  &__logo_mobile {
+    z-index: 99;
   }
 
   &__menu_mobile {
@@ -96,7 +99,7 @@
       width: 150px;
     }
   }
-  &__mobile__memu {
+  &__mobile__menu {
     display: flex;
     width: 100%;
     justify-content: space-between;

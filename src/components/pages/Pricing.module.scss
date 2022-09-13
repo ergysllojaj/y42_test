@@ -11,7 +11,6 @@
     width: auto;
     bottom: 0;
     left: 0;
-    z-index: -1;
   }
 
   img:nth-child(2) {
@@ -19,7 +18,6 @@
     width: auto;
     top: 0;
     right: 0;
-    z-index: -1;
   }
 
   &__wrapper {
@@ -67,7 +65,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    z-index: 1;
     gap: 20px;
     transition: all 0.3s ease-in-out;
     &:hover {
@@ -170,6 +168,7 @@
     padding: 50px;
     border-radius: 10px;
     align-items: center;
+    position: relative;
   }
 
   &__title {
